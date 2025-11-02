@@ -1,11 +1,11 @@
-// let array = [10, 25, 42, 50, 110, 21, 12];
+let array = [10, 25, 42, 50, 110, 21, 12];
 
-// const res = array
-// 	.filter(el => el % 5 == 0)
-// 	.filter(el => el % 2 == 0)
-// 	.reduce((acc, num) => acc + num , 0);
+const res = array
+	.filter(el => el % 5 == 0)
+	.filter(el => el % 2 == 0)
+	.reduce((acc, num) => acc + num , 0);
 
-// console.log(res)
+console.log(res)
 
 const date1 = new Date("Thu Jan 11 2024 14:00:00 GMT+0400");
 const date2 = new Date("Sun Jan 31 2024 15:00:00 GMT+0400");
