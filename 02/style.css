@@ -1,0 +1,136 @@
+/* RESET - Remove default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY - Dark blue/gray gradient background */
+body {
+    background: linear-gradient(135deg, #667eea 0%, #4a5568 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;       /* Center vertically */
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* CONTAINER - Holds slider and title */
+.container {
+    display: flex;
+    flex-direction: column;  /* Stack items vertically */
+    align-items: center;
+    gap: 20px;  /* Space between slider and title */
+}
+
+/* SLIDER BOX - White card container */
+.slider-box {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    position: relative;  /* For absolute positioning of dots */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* SLIDER WRAPPER - Contains all images */
+.slider-wrapper {
+    width: 500px;
+    height: 280px;
+    position: relative;
+    overflow: hidden;  /* Hide images outside the box */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* SLIDER IMAGES - Each individual image */
+.slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Makes image cover the area without distortion */
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;  /* Hidden by default */
+    transition: opacity 0.5s ease-in-out;  /* Smooth fade effect */
+}
+
+/* ACTIVE IMAGE - The currently visible image */
+.slider-image.active {
+    opacity: 1;  /* Fully visible */
+}
+
+/* ARROW BUTTONS - Both left and right navigation */
+.arrow-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;  /* Makes it circular */
+    background: #2d3748;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;  /* Shows hand cursor on hover */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;  /* Smooth color change */
+}
+
+/* ARROW BUTTON HOVER - Darker when mouse over */
+.arrow-btn:hover {
+    background: #1a202c;
+}
+
+/* ARROW BUTTON ACTIVE - Slightly smaller when clicked */
+.arrow-btn:active {
+    transform: scale(0.95);
+}
+
+/* DOTS CONTAINER - Bottom navigation indicators */
+.dots {
+    position: absolute;  /* Positioned relative to slider-box */
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);  /* Centers horizontally */
+    display: flex;
+    gap: 10px;
+    z-index: 10;  /* Appears above images */
+}
+
+/* INDIVIDUAL DOT */
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;  /* Makes it circular */
+    background: rgba(255, 255, 255, 0.5);  /* Semi-transparent white */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* DOT HOVER - Slightly larger on hover */
+.dot:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: scale(1.2);
+}
+
+/* ACTIVE DOT - The current slide indicator */
+.dot.active {
+    background: #2d3748;  /* Dark color */
+    width: 12px;
+    height: 12px;
+}
+
+/* TITLE - Text below the slider */
+.title {
+    background: white;
+    color: #2d3748;
+    padding: 15px 40px;
+    border-radius: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
