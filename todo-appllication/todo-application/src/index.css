@@ -1,0 +1,29 @@
+:root {
+  --bg-primary: #f8f9fc;
+  --bg-card: #ffffff;
+  --text-primary: #1a1a2e;
+  --text-secondary: #6b7280;
+  --accent-purple: #7c3aed;
+  --accent-yellow: #f59e0b;
+  --accent-blue: #3b82f6;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+#root {
+  max-width: 900px;
+  margin: 0 auto;
+}

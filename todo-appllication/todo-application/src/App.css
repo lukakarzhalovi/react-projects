@@ -1,0 +1,20 @@
+.app-container {
+  background-color: var(--bg-card);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px var(--shadow);
+  padding: 30px;
+  min-height: 80vh;
+  position: relative;
+  border-bottom: 6px solid var(--accent-blue);
+}
+
+.controls-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.todo-content {
+  min-height: 400px;
+}

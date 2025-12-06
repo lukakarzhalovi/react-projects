@@ -1,0 +1,22 @@
+.add-button {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--accent-purple);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+  cursor: pointer;
+}
+
+.add-button img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) invert(1);
+}
+

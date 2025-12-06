@@ -1,0 +1,84 @@
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background-color: var(--bg-card);
+  border-radius: 12px;
+  margin-bottom: 12px;
+  border-left: 4px solid var(--accent-purple);
+}
+
+.todo-item.completed {
+  opacity: 0.7;
+  border-left-color: #22c55e;
+}
+
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: var(--text-secondary);
+}
+
+.todo-checkbox {
+  position: relative;
+}
+
+.todo-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
+.checkmark {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--accent-purple);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: transparent;
+}
+
+.checkmark img {
+  width: 14px;
+  height: 14px;
+  display: none;
+}
+
+.todo-checkbox input:checked + .checkmark {
+  background-color: #22c55e;
+  border-color: #22c55e;
+  color: #ffffff;
+}
+
+.todo-checkbox input:checked + .checkmark img {
+  display: block;
+  filter: brightness(0) invert(1);
+}
+
+.todo-text {
+  flex: 1;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.delete-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.delete-btn img {
+  width: 18px;
+  height: 18px;
+}
+
